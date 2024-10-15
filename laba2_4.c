@@ -18,9 +18,8 @@ int main(){
     double monthlyRate = (proc_st / 100) / 12;
     int total = years * 12;
     
-    //по формуле аннуитета
-    double monthlyPayment = (sum_kredit * monthlyRate) / 
-                            (1 - pow(1 + monthlyRate, -total));
+    //Аннуитетный платеж(когда одна сумма выплат каждый месяц)
+    double monthlyPayment = (sum_kredit * monthlyRate) / (1 - pow(1 + monthlyRate, -total));
     
     double totalPaid = monthlyPayment * total;
     
